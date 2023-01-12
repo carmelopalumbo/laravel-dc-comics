@@ -9,7 +9,7 @@
     <!-- Styles -->
     @vite('resources/js/app.js')
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ Vite::asset('public/favicon.ico') }}" type="image/x-icon">
 
     <!-- Font Awesome -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css'
@@ -17,14 +17,17 @@
         crossorigin='anonymous' />
 
 
-    <title>DC Manager</title>
+    <title>DC Manager | @yield('title')</title>
 </head>
 
 <body>
 
     @include('partials.header')
 
-    @yield('content')
+    <main>
+        @yield('content')
+    </main>
+
 </body>
 
 </html>
