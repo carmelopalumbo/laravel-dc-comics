@@ -5,13 +5,13 @@
         <a href="{{ route('comics.create') }}" class="btn btn-success ms-5 my-4 fs-4 px-3">+</a>
     </div>
 
-    <div class="container">
+    <div class="container tablebox">
         <table class="table m-auto">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Titolo</th>
-                    <th scope="col">Prezzo</th>
+                    <th scope="col">TITOLO</th>
+                    <th scope="col">PREZZO</th>
                     <th scope="col">ACTION</th>
                 </tr>
             </thead>

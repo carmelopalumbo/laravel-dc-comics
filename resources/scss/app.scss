@@ -1,8 +1,20 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body{
+    background-color: #161616;
+    font-family: 'Poppins', sans-serif;
+}
 
 header{
     img{
         width: 150px;
+    }
+    h1{
+        color: #0078EF;
+        font-size: 3rem;
+        font-weight: bolder;
+        padding-left: 5px;
     }
 }
 
@@ -10,9 +22,39 @@ main{
     .backhome{
         a{
             text-decoration: none;
-            color: black;
-            font-size: 3rem;
+            color: #0078EF;
+            font-size: 3.5rem;
         }
     }
+
+    .tablebox{
+        table{
+            color: white;
+            border: 1px solid white;
+            thead{
+                color: #0078EF;
+            }
+        }
+    }
+}
+
+.details-box{
+    border: 2px solid #0078EF;
+    h2{
+        color: #0078EF;
+        font-weight: bolder;
+    }
+    p{
+        color: white;
+    }
+    img{
+        width: 280px;
+        height: 400px;
+        object-fit: cover;
+    }
+}
+
+label{
+    color: #0078EF;
 }
 
