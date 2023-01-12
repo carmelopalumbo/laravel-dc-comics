@@ -5,7 +5,7 @@
         <a href="{{ route('comics.index') }}"><i class="fa-solid fa-arrow-left"></i></a>
     </div>
 
-    <div class="details-box mb-3">
+    <div class="details-box mb-3 container p-2">
         <div class="container d-flex pt-5">
             <div class="image">
                 <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
