@@ -38,17 +38,13 @@ class ComicController extends Controller
     {
         // all() method get only data array
         $form_input = $request->all();
+        $form_input['slug'] = Comic::generateSlug($form_input['title']);
 
         //dd($form_input);
         $new_item = new Comic();
-        $new_item->title = $form_input['title'];
-        $new_item->slug = Comic::generateSlug($new_item->title);
-        $new_item->description = $form_input['description'];
-        $new_item->thumb = $form_input['thumb'];
-        $new_item->price = $form_input['price'];
-        $new_item->series = $form_input['series'];
-        $new_item->sale_date = $form_input['sale_date'];
-        $new_item->type = $form_input['type'];
+        $new_item->slug = $form_input['slug'];
+
+        $new_item->fill($form_input);
 
         $new_item->save();
 

@@ -6,8 +6,8 @@
     </div>
 
     <div class="details-box mb-3 container p-2">
-        <div class="container d-flex pt-5">
-            <div class="image">
+        <div class="container d-flex pt-5 justify-content-center">
+            <div class="image px-4">
                 <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
             </div>
             <div class="text text-center">
