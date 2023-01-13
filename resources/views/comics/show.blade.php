@@ -12,8 +12,8 @@
 
     @if (session('edit'))
         <div class="container">
-            <div class="alert alert-success text-center my-4" role="alert">
-                {{ session('edit') }}
+            <div class="alert alert-success text-center my-4 w-50 m-auto" role="alert">
+                {!! session('edit') !!}
             </div>
         </div>
     @endif

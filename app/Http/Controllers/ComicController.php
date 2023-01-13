@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\ComicRequest;
 use App\Models\Comic;
-use Illuminate\Http\Request;
 
 class ComicController extends Controller
 {
@@ -34,7 +34,7 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ComicRequest $request)
     {
         // all() method get only data array
         $form_input = $request->all();
@@ -80,7 +80,7 @@ class ComicController extends Controller
      * @param  \App\Models\Comic  $comic
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $comic)
+    public function update(ComicRequest $request, Comic $comic)
     {
         $form_input = $request->all();
 
@@ -93,7 +93,7 @@ class ComicController extends Controller
         // fill with new data
         $comic->update($form_input);
 
-        return redirect(route('comics.show', $comic))->with('edit', "Comics: $comic->title aggiornato con successo.");
+        return redirect(route('comics.show', $comic))->with('edit', "Comics: <strong>$comic->title</strong> aggiornato con successo.");
     }
 
     /**
