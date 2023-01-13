@@ -41,7 +41,7 @@
         </table>
     </div>
 
-    <div class="d-flex justify-content-center py-4">
+    <div class="d-flex justify-content-center py-4 pag-box">
         {{ $comics->links() }}
     </div>
 @endsection

@@ -67,3 +67,20 @@ label{
     padding-left: 2px;
 }
 
+.pag-box{
+    margin-top: 15px;
+    .pagination{
+        .page-item{
+            margin: 0 7px;
+            .page-link{
+                border: none;
+                background-color: #0078EF;
+                color: #161616;
+                font-weight: bold;
+                border-radius: 15px;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
