@@ -70,7 +70,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -82,7 +82,18 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $form_input = $request->all();
+
+        if ($form_input['title'] != $comic->title) {
+            $form_input['slug'] = Comic::generateSlug($form_input['title']);
+        } else {
+            $form_input['slug'] = $comic->slug;
+        }
+
+        // fill with new data
+        $comic->update($form_input);
+
+        return redirect(route('comics.show', $comic))->with('edit', "Comics: $comic->title aggiornato correttamente.");
     }
 
     /**
