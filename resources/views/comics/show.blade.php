@@ -4,9 +4,9 @@
     <div class="container py-3 editbox d-flex justify-content-between">
         <a href="{{ route('comics.index') }}"><i class="fa-solid fa-arrow-left backhome"></i></a>
         <div class="div">
-            <a href="{{ route('comics.edit', $comic) }}" class="btn btn-warning mx-2 fs-3 mx-4"><i
+            <a href="{{ route('comics.edit', $comic) }}" class="btn btn-warning mx-2 fs-6 mx-4"><i
                     class="fa-solid fa-pen-to-square"></i></a>
-            <a href="#" class="btn btn-danger"><i class="fa-solid fa-trash fs-2 pt-1"></i></a>
+            @include('partials.delete-form', ['item' => $comic])
         </div>
     </div>
 

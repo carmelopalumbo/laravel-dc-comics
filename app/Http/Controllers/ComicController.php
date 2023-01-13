@@ -93,7 +93,7 @@ class ComicController extends Controller
         // fill with new data
         $comic->update($form_input);
 
-        return redirect(route('comics.show', $comic))->with('edit', "Comics: $comic->title aggiornato correttamente.");
+        return redirect(route('comics.show', $comic))->with('edit', "Comics: $comic->title aggiornato con successo.");
     }
 
     /**
@@ -104,6 +104,8 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+
+        return redirect(route('comics.index'))->with('delete', "Comics: <strong>$comic->title</strong> eliminato.");
     }
 }
